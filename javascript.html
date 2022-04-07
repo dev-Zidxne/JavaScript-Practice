@@ -4,26 +4,28 @@
 
 
 
-<h1 id="header">Hello</h1>
-<button onclick="red()">Red</button>
-<button onclick="blue()">Blue</button>
+<h1 id="header">What is your age?</h1>
+<input type="text" id="inp"/>
+<button onclick="pressed()">Click</button>
+<p id="output"></p>
 
 <script>
-function red (){
-    document.getElementById("header").style.color="red"
-}
-
-function blue(){
-    document.getElementById("header").style.color="blue"
-}
-
+    function pressed(){
+    let text = parseInt(document.getElementById("inp").value); 
+    let output = document.getElementById("output");
     
+    if(text > 18){
+        output.innerHTML = "You are older than 18!";
 
+     }else if(text == 18) {output.innerHTML = "You are  18!";
 
+    }else{
+        output.innerHTML = "You are NOT older than 18!";
+    }
 
-
-    
-</script>
+    }   
+  
+   </script>
 
 </body>
 </html>
